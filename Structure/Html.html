@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>/*%TITLE1%*/</title>
+    <!--<link rel="shortcut icon" href="Icone.ico">-->
+    <!--<script src="Javascript.js"></script>-->
+    <!--<link rel="stylesheet" href="Css.css">-->
+    <style>
+        /*%CSS%*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>/*%TITLE2%*/</h1>
+
+        <h2>Upload File</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label class="custom-file-label" for="fileInput">📄 Choose a file</label>
+            <input type="text" id="keyInput" placeholder="Encryption key" required>
+            <input type="file" id="fileInput" required>
+            <button type="submit">💾 Upload</button>
+        </form>
+        <div id="filePathDisplay" class="path"></div>
+        <h2>Available Files</h2>
+        <ul id="fileList">
+        {% for filename, number in files %}
+            <li>
+                <span>📄 File Encrypted {{ number }}</span>
+                <button type="button" class="download-btn" data-file="{{ filename }}">💾 Download</button>
+            </li>
+        {% endfor %}
+        </ul>
+        <p class="credits">Developed by: <a class="credits-a" href="https:///*%GITHUB%*/" target="_blank">/*%DEVELOPER%*/</a></p>
+    </div>
+    <script>
+        /*%JAVASCRIPT%*/
+    </script>
+</body>
+</html>
