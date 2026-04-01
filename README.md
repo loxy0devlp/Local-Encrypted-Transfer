@@ -6,7 +6,7 @@
   This tool allows secure file transfers using end-to-end encryption. Neither the content nor the file names are visible to your internet router. It enables simple and secure sharing between devices (computer, server, phone, etc.) as long as they are connected to the same network via a local web interface.
 </p>
 
-<h2>🚀 Features</h2>
+<h2>🚀 Features:</h2>
 
 <ul>
   <li>🔒 Secure communication over HTTPS (self-signed certificate).</li>
@@ -19,7 +19,7 @@
   <li>🗑️ Automatic deletion after download: secure file overwrite, deletion, and cleanup of associated logs.</li>
 </ul>
 
-<h2>⚙️ Installation</h2>
+<h2>⚙️ Installation:</h2>
 
 <ol>
   <li>Clone the repository:</li>
@@ -35,7 +35,7 @@
   <pre>python local_encrypted_transfer.py</pre>
 </ol>
 
-<h2>📋 Usage</h2>
+<h2>📋 Usage:</h2>
 
 <ul>
   <li>Open your browser and access:</li>
@@ -58,7 +58,7 @@
   </ul>
 </ul>
 
-<h2>⚠️ Important Notes</h2>
+<h2>⚠️ Important:</h2>
 
 <ul>
   <li>If you lose the encryption key, the file cannot be recovered.</li>
@@ -67,11 +67,11 @@
   <li>Uses self-signed HTTPS (browser warning is normal).</li>
 </ul>
 
-<h2>📸 Preview</h2>
+<h2>📸 Preview:</h2>
 
 <img src="Image/Interface.png" alt="Interface" width="9999">
 
-<h2>👨‍💻 Credits</h2>
+<h2>👨‍💻 Credits:</h2>
 
 <ul>
   <li>Developed by: <b>loxy0dev</b></li>
