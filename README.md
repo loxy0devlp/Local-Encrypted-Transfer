@@ -9,6 +9,7 @@
 <h2>🚀 Features:</h2>
 
 <ul>
+  <li>💻 Available on Windows and Linux.</li>
   <li>🔒 Secure communication over HTTPS (self-signed certificate).</li>
   <li>🔐 100% client-side end-to-end encryption with AES-GCM.</li>
   <li>🕵️ Server sees neither file content nor file names (everything is encrypted before upload).</li>
