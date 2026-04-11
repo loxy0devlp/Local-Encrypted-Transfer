@@ -78,5 +78,6 @@
   <li>Developed by: <b>loxy0dev</b></li>
   <li>GitHub: <a href="https://github.com/loxy0devlp">github.com/loxy0devlp</a></li>
   <li>GunsLol: <a href="https://guns.lol/loxy0dev">guns.lol/loxy0dev</a></li>
+  <li>License: <b>MIT License</b></li>
   <li>Version: <b>v1.0</b></li>
 </ul>
