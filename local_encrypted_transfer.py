@@ -1,4 +1,6 @@
-# Copyright (c) Local Encrypted Transfer by Loxy0dev
+# Copyright (c) Local Encrypted Transfer by Loxy0devlp
+# Licensed under the MIT License.
+# See LICENSE file in the project root for full license text.
 
 from flask import Flask, request, render_template_string, send_from_directory, send_file
 import os, socket, colorama, sys, ctypes, json
@@ -6,11 +8,13 @@ import os, socket, colorama, sys, ctypes, json
 credits = {
     "tool_name"    : "Local Encrypted Transfer",
     "tool_version" : "1.0",
-    "developer"    : "loxy0dev",
-    "github"       : "github.com/loxy0devlp/Local-Encrypted-Transfer",
+    "tool_license" : "MIT License",
+    "tool_github"  : "github.com/loxy0devlp/Local-Encrypted-Transfer",
+    "developer"    : "loxy0devlp",
     "gunslol"      : "guns.lol/loxy0dev"
 }
 
+colorama.init()
 color  = colorama.Fore
 white  = color.WHITE
 reset  = color.RESET
@@ -33,7 +37,7 @@ banner = rf"""
              |    |__(  <_> )  \___ / __ \|  |__   |    |   |  | \// __ \|   |  \\___ \  |  | \  ___/|  | \/
              |________\____/ \_____>______/____/   |____|   |__|  (______/___|__/______> |__|  \_____>__|   
              
-                                     {white + credits['github']}
+                                     {white + credits["tool_github"]}
 """
 
 path_tool             = os.path.dirname(os.path.abspath(__file__))
@@ -49,7 +53,7 @@ path_file_html        = os.path.join(path_folder_structure, "Html.html")
 with open(path_file_config,     "r", encoding="utf-8") as file: data_config        = json.load(file)
 with open(path_file_css,        "r", encoding="utf-8") as file: content_css        = file.read()
 with open(path_file_javascript, "r", encoding="utf-8") as file: content_javascript = file.read()
-with open(path_file_html,       "r", encoding="utf-8") as file: content_html       = file.read().replace("/*%CSS%*/", content_css).replace("/*%JAVASCRIPT%*/", content_javascript).replace("/*%TITLE1%*/", f"{credits["tool_name"]} v{credits["tool_version"]} (by {credits["developer"]})").replace("/*%TITLE2%*/", credits["tool_name"]).replace(r"/*%GITHUB%*/", credits["github"]).replace(r"/*%DEVELOPER%*/", credits["developer"])
+with open(path_file_html,       "r", encoding="utf-8") as file: content_html       = file.read().replace("/*%CSS%*/", content_css).replace("/*%JAVASCRIPT%*/", content_javascript).replace("/*%TITLE1%*/", f"{credits["tool_name"]} v{credits["tool_version"]} (by {credits["developer"]})").replace("/*%TITLE2%*/", credits["tool_name"]).replace(r"/*%GITHUB%*/", credits["tool_github"]).replace(r"/*%DEVELOPER%*/", credits["developer"])
 
 HOST = data_config["host"]
 PORT = data_config["port"]
@@ -85,7 +89,6 @@ def SaveFilesJson(data):
     with open(path_file_logs, "w", encoding="utf-8") as file: json.dump(data, file, indent=2)
 
 def Start():
-    colorama.init()
     Title()
     CreateFolderAndFile()
     app = Flask(__name__)
